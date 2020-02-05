@@ -7,12 +7,11 @@ public class baek_4673 {
             isSelf[i] = true;
 
         for(int i = 1; i < 10000; i++) {
-            if(isSelf[i]==true){ // 아직 검사를 거치지 않은 수
+            if(isSelf[i]==true){
                 d(i);
             }
         }
 
-        System.out.println("d(n)끝, 배열 isSelf 출력 시작");
         for(int i = 1; i < 10000; i++) {
             if(isSelf[i] == true)
                 System.out.println(i);
@@ -26,7 +25,6 @@ public class baek_4673 {
         }
         if(result < 10000) {
             isSelf[result] = false;
-//            System.out.println(result);
             d(result);
         }
     }
