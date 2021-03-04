@@ -8,7 +8,6 @@ public class RuleOfBigNumber {
     public static void main(String[] args) throws Exception {
         File file = new File("/Users/youngpro/Desktop/algorithm/Algorithm/test.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
