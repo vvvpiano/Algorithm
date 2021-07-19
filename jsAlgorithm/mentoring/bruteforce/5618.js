@@ -2,6 +2,8 @@ const fs = require('fs');
 const input = fs.readFileSync("../.././test.txt").toString().trim().split('\n');
 const numbers = input[1].split(' ').map(Number);
 
+// 이건 시간초과
+
 // const solution = numbers => {
 //     const gcd = calculate_gcd(numbers);
 //     print_cd(gcd);
