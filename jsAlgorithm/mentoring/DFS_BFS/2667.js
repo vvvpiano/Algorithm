@@ -1,5 +1,5 @@
 const fs = require('fs');
-const input = fs.readFileSync("../.././test.txt").toString().trim().split('\n');
+const input = fs.readFileSync("../../test.txt").toString().trim().split('\n');
 const N = parseInt(input.shift());
 
 const solution = (N, input) => {

@@ -4,7 +4,6 @@ const N = parseInt(input.shift());
 const schedule = input.map(line => line.trim().split(" ").map(Number)).sort((a, b) => a[0] - b[0]);
 // console.log(N, schedule);
 
-
 class Heap {
     constructor() {
         this.heap = []
@@ -84,7 +83,6 @@ const solution = (schedule) => {
     let count = 1;
 
     for (let i = 1; i < schedule.length; i++) {
-        // console.log("Q:", queue, count);
         let time = schedule[i];
         let top = queue.peek();
         if (top.key > time[0]) {
@@ -95,13 +93,8 @@ const solution = (schedule) => {
             queue.insert(time[1], time[0]);
         }
     }
-    // console.log("Q:", queue);
 
     return count;
 }
 
-// const insert_queue = (time, queue) => {
-//     queue.push(time);
-//     return queue.sort((a, b) => a[1] - b[1]);
-// }
 console.log(solution(schedule))
