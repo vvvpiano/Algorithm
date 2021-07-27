@@ -1,4 +1,4 @@
-package theory;
+package jsAlgorithm.mentoring.Heap;
 
 import java.io.BufferedReader;
 import java.io.File;
