@@ -18,7 +18,6 @@ class Trie {
     insert = (string) => {
         let curent_node = this.root;
         for (let i = 0; i < string.length; i++) {
-            // console.log("current value:", curent_node.value);
             const char = string.charAt(i);
             if (curent_node.children[char] && curent_node.children[char].is_leaf)
                 return false;
