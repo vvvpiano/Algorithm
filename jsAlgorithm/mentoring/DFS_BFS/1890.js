@@ -1,3 +1,4 @@
+// JS 자료형의 한계때문에 백준 채점에는 통과하지 못함
 const fs = require('fs');
 const input = fs.readFileSync("../../test.txt").toString().trim().split('\n');
 const N = parseInt(input.shift());
