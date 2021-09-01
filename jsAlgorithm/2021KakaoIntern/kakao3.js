@@ -5,23 +5,15 @@ function solution(n, k, cmd) {
 
     for (let i = 0; i < cmd.length; i++) {
         let [command, count] = cmd[i].split(" ");
-        console.log(command, count)
         if (command == 'U') {
-            console.log("current: ", current);
-            // current = rows.indexOf(current) - parseInt(count);
             current -= parseInt(count);
-            console.log("up to ", count, " current: ", current, rows[current]);
         }
         if (command == 'D') {
-            console.log("current: ", current);
-            // current = rows.indexOf(current) + parseInt(count);
             current += parseInt(count);
-            console.log("down to ", count, " current: ", current, rows[current]);
         }
         if (command == 'C') {
             stack.push(rows[current]);
             rows.splice(current, 1);
-            console.log("remove ", current, "after:", rows, "current:", current, rows[current]);
             if (current > rows.length - 1)
                 current--;
         }
@@ -33,7 +25,6 @@ function solution(n, k, cmd) {
                 i++;
             rows.splice(i, 0, recover);
             current = rows.indexOf(value);
-            console.log("after insert:", rows);
         }
     }
 
