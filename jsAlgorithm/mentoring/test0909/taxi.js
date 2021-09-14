@@ -33,7 +33,7 @@ const dijkstra = (startNodeNo, size, neighbors) => {
     weights[startNodeNo] = 0
     pq.push(new Node(startNodeNo, 0))
     while (pq.length > 0) {
-        node = pq.sort((a, b) => a.weight - b.weight).shift()
+        const node = pq.sort((a, b) => a.weight - b.weight).shift()
         if (isVisited[node.no]) continue
         isVisited[node.no] = true
         neighbors[node.no].forEach((neighborNode) => {
